@@ -1,0 +1,19 @@
+{
+  "builders": [
+    {
+      "type": "docker",
+      "image": "fedora/tools",
+      "discard": true
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "lumberjack",
+      "print_only": true,
+      "exclude_paths": [
+        "/tmp"
+      ],
+      "prevent_sudo": true
+    }
+  ]
+}
